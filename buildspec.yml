@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo Entered the build stage...
+      - echo Build started on `date`
+      - mvn clean install
+  post_build:
+    commands:
+      - echo Build completed
+artifacts:
+  files:
+    - target/hermes-websites-backend-service-*.jar
+  discard-paths: yes
